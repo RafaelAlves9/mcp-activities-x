@@ -1,9 +1,11 @@
 {
-  "name": "mcp-activities",
+  "name": "mcp-activities-x",
   "version": "1.0.0",
   "description": "MCP server for creating activities in meupontoonline",
   "main": "src/index.js",
   "type": "module",
+  "author": "Rafael Alves",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "start": "tsx src/index.ts",
@@ -20,7 +22,6 @@
     "activities",
     "cursor"
   ],
-  "author": "Yohan Fraga Santos",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.4",
     "@types/jsdom": "^21.1.7",

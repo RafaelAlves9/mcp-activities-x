@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "mcp-activities": {
+    "mcp-activities-x": {
       "command": "node",
-      "args": ["C:\\mcp\\mcp-activities\\src\\index.js"]
+      "args": ["C:\\mcp\\mcp-activities-x\\src\\index.js"]
     }
   }
 }
