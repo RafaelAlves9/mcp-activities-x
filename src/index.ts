@@ -1,11 +1,10 @@
 import 'dotenv/config';
+import cors from 'cors';
 import express, { Request, Response } from "express";
 import { createActivityTool } from "./tools/create-activity-tool.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createMissingActivitiesTool } from './tools/create_missing-activities-tool.js';
-
-export const url = 'https://app.meupontoonline.com'
 const PORT = process.env.PORT || 3000;
 
 function getServer() {
@@ -33,6 +32,7 @@ function getServer() {
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.post('/mcp', async (req: Request, res: Response) => {
@@ -42,7 +42,6 @@ app.post('/mcp', async (req: Request, res: Response) => {
       sessionIdGenerator: undefined,
     });
     res.on('close', () => {
-      console.log('Request closed');
       transport.close();
       server.close();
     });

@@ -1,8 +1,8 @@
 import { ErrorCode, McpError } from "@modelcontextprotocol/sdk/types.js";
 import axios from "axios";
-import { url } from "..";
-import log from "./logger";
-import { LoginRequest } from "../types/login";
+import { url } from "../constants.js";
+import log from "./logger.js";
+import { LoginRequest } from "../types/login.js";
 
 
 export default async function Login(loginRequest: LoginRequest): Promise<string> {

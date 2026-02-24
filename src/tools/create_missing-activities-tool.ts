@@ -1,13 +1,13 @@
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
-import createActivity from "../utils/create-activity";
+import createActivity from "../utils/create-activity.js";
 import { log } from "console";
-import Login from "../utils/login";
-import getLatestClockIns from "../utils/get-latest-clock-ins";
-import getLatestActivities from "../utils/get-latest-activities";
-import transformToDTO from "../utils/format-activity";
-import { Horario } from "../types/ponto";
-import { MissingActivitiesMcpRequest, TaskMcpRequest } from "../types/activities";
+import Login from "../utils/login.js";
+import getLatestClockIns from "../utils/get-latest-clock-ins.js";
+import getLatestActivities from "../utils/get-latest-activities.js";
+import transformToDTO from "../utils/format-activity.js";
+import { Horario } from "../types/ponto.js";
+import { MissingActivitiesMcpRequest, TaskMcpRequest } from "../types/activities.js";
 
 const monthMap: { [key: string]: string } = {
   'jan': '01',

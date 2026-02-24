@@ -1,11 +1,11 @@
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
-import createActivity from "../utils/create-activity";
-import transformToDTO from "../utils/format-activity";
+import createActivity from "../utils/create-activity.js";
+import transformToDTO from "../utils/format-activity.js";
 import { log } from "console";
-import { ActivityMcpRequest } from "../types/activities";
-import Login from "../utils/login";
-import { LoginRequest } from "../types/login";
+import { ActivityMcpRequest } from "../types/activities.js";
+import Login from "../utils/login.js";
+import { LoginRequest } from "../types/login.js";
 
 export const createActivityTool = {
     name: 'create-activity',

@@ -1,4 +1,4 @@
-import { ActivityMcpRequest, ActivityRequest } from "../types/activities";
+import { ActivityMcpRequest, ActivityRequest } from "../types/activities.js";
 
 export default function transformToDTO(request: ActivityMcpRequest): ActivityRequest {
     const start = new Date(request.startDate);

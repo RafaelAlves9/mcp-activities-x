@@ -1,8 +1,8 @@
 import axios from "axios";
-import { url } from "..";
-import Login from "./login";
-import log from "./logger";
-import { ActivityRequest } from "../types/activities";
+import { url } from "../constants.js";
+import Login from "./login.js";
+import log from "./logger.js";
+import { ActivityRequest } from "../types/activities.js";
 
 export default async function createActivity(dto: ActivityRequest, cookie: string) {
     try {

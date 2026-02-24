@@ -1,7 +1,7 @@
 import axios from "axios";
 import { JSDOM } from "jsdom";
-import { url } from "..";
-import { Horario, Ponto, PontoResponse } from "../types/ponto";
+import { url } from "../constants.js";
+import { Horario, Ponto, PontoResponse } from "../types/ponto.js";
 
 export default async function getLatestClockIns(cookies: string): Promise<Ponto[]> {
     const response = await axios.get(`${url}/Ponto/LoadPagination?dataPesquisa=&pageSize=50&pageNumber=1`, {
